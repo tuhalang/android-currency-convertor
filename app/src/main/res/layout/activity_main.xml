@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="USD"
+            android:text="From"
             android:textSize="28sp"/>
-        <EditText
-            android:id="@+id/edit_usd"
+
+        <Spinner
+            android:id="@+id/from"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#d6d6d6"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="To"
+            android:textSize="28sp" />
+
+        <Spinner
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#d6d6d6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:inputType="number"
-            android:textSize="28sp"/>
-    </LinearLayout>
+            android:background="#d6d6d6"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EUR"
+            android:text="Result"
             android:textSize="28sp"/>
-        <EditText
-            android:id="@+id/edit_eur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textSize="28sp"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VND"
-            android:textSize="28sp"/>
-        <EditText
-            android:id="@+id/edit_vnd"
+            android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"/>
-    </LinearLayout>
+            android:layout_height="50dp"
+            android:textSize="28sp"
+            android:background="#d6d6d6"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <Button
             android:id="@+id/button_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:text="Clear"
             android:textSize="24sp"/>
-        <Button
-            android:id="@+id/button_convert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Convert"
-            android:textSize="24sp"/>
+
     </LinearLayout>
-</LinearLayout>
+
+</ScrollView>
